@@ -33,7 +33,7 @@ public class PasswordBaseExample {
         cipher.init(cipher.ENCRYPT_MODE, secretKey, param);
         String clear = "Encrypt for java";
         byte[] encrypted = cipher.doFinal(clear.getBytes());
-        Base64Encoder encoder = new Base64Encoder();
+//        Base64Encoder encoder = new Base64Encoder();
         // Decrypt
 
 
