@@ -1,0 +1,22 @@
+// derby
+CREATE TABLE Products
+(
+    ID int not null generated always as identity (start with 1, increment by 1) primary key,
+    ProductName varchar(50),
+    ProductDesc varchar(50),
+    Price double
+)
+
+------------
+// mySQL
+CREATE DATABASE myDBSlotNineJavaTwo;
+
+USE myDBSlotNineJavaTwo;
+
+CREATE TABLE Products (
+    ID INT NOT NULL AUTO_INCREMENT,
+    ProductName VARCHAR(50),
+    ProductDesc VARCHAR(50),
+    Price DOUBLE,
+    PRIMARY KEY (ID)
+);
