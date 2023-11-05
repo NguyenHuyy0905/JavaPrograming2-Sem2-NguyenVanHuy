@@ -1,0 +1,16 @@
+CREATE DATABASE Slot12EmployeeManagement;
+
+USE Slot12EmployeeManagement;
+
+CREATE TABLE admins (
+    id int PRIMARY KEY AUTO_INCREMENT,
+    username varchar(255) NOT NULL,
+    password varchar(255) NOT NULL
+);
+
+CREATE TABLE employees (
+    id int PRIMARY KEY AUTO_INCREMENT,
+    firstName varchar(255) NOT NULL,
+    lastName varchar(255) NOT NULL,
+    salary int
+);
