@@ -1,0 +1,31 @@
+CREATE DATABASE AptechLibrary;
+
+USE AptechLibrary;
+
+CREATE TABLE books (
+    code int PRIMARY KEY AUTO_INCREMENT,
+    name varchar(255) NOT NULL,
+    author varchar(255) NOT NULL,
+    status varchar(255)
+);
+
+CREATE TABLE students (
+    id int PRIMARY KEY AUTO_INCREMENT,
+    name varchar(255) NOT NULL
+);
+
+CREATE TABLE staffs (
+    id int PRIMARY KEY AUTO_INCREMENT,
+    name varchar(255) NOT NULL
+);
+
+CREATE TABLE ticketBook (
+    id int PRIMARY KEY AUTO_INCREMENT,
+    borrow_date Date,
+    return_date Date,
+    book_id int,
+    student_id int,
+    isOpen tinyint(1),
+    CONSTRAINT FK_book_ticket FOREIGN KEY (book_id) REFERENCES books(id),
+    CONSTRAINT FK_student_ticket FOREIGN KEY (student_id) REFERENCES students(id)
+);
