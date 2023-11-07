@@ -2,6 +2,7 @@ package model;
 
 import dao.DBConnection;
 import entity.Book;
+import entity.Status;
 
 import java.sql.*;
 import java.util.ArrayList;
@@ -12,9 +13,11 @@ import java.util.logging.Logger;
 public class BookDaoImpl implements BookDao{
     private static final String SQL_CREATE_BOOK = "INSERT INTO books (name, author, status) VALUES (?, ?, ?);";
     private static final String SQL_DELETE_BOOK = "DELETE FROM books WHERE id = ?;";
+    private static final String SQL_UPDATE_STATUS_BOOK = "UPDATE books SET status = ? WHERE id = ?;";
     private static final String SQL_VIEW_ALL_BOOKS = "SELECT * FROM books;";
     private static final String SQL_SEARCH_BOOK_BY_CODE = "SELECT * FROM books WHERE code = ?;";
     private static final String SQL_SEARCH_BOOK_BY_NAME = "SELECT * FROM books WHERE name = ?;";
+    private static final String SQL_VIEW_BOOK_DETAILS = "SELECT b.code, b.name, b.author, b.status, t.borrow_date, t.return_date FROM books b LEFT JOIN ticketBook t ON b.id = t.book_id WHERE b.id = ?;";
     @Override
     public void createBook(Book book) {
         try (Connection conn = DBConnection.createConnection();
@@ -45,6 +48,21 @@ public class BookDaoImpl implements BookDao{
             pstm.executeUpdate();
             conn.commit();
             System.out.println("Xóa thành công !");
+        } catch (SQLException ex) {
+            Logger.getLogger(BookDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
+    @Override
+    public void updateStatusBook(int id, Status status) {
+        try (Connection conn = DBConnection.createConnection();
+             PreparedStatement pstm = conn.prepareStatement(SQL_UPDATE_STATUS_BOOK)) {
+            conn.setAutoCommit(false);
+            pstm.setString(1, status.name());
+            pstm.setInt(2, id);
+            pstm.executeUpdate();
+            conn.commit();
+            System.out.println("Cấp nhật trạng thái sách thành công !");
         } catch (SQLException ex) {
             Logger.getLogger(BookDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
         }
@@ -121,5 +139,27 @@ public class BookDaoImpl implements BookDao{
             Logger.getLogger(BookDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
         }
         return bookList;
+    }
+
+    @Override
+    public void viewBookDetails(int id) {
+        try (Connection conn = DBConnection.createConnection();
+             PreparedStatement pstm = conn.prepareStatement(SQL_VIEW_BOOK_DETAILS)) {
+            conn.setAutoCommit(false);
+            pstm.setInt(1, id);
+            try (ResultSet rs = pstm.executeQuery()) {
+                while (rs.next()) {
+                    System.out.print("\nCode: " + rs.getString(1));
+                    System.out.print(", Name: " + rs.getString(2));
+                    System.out.print(", Author: " + rs.getString(3));
+                    System.out.print(", Status: " + rs.getString(4));
+                    System.out.print(", Borrow date: " + rs.getDate(5));
+                    System.out.print(", Return date: " + rs.getDate(6));
+                }
+            }
+            conn.commit();
+        } catch (SQLException ex) {
+            Logger.getLogger(BookDaoImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 }

@@ -2,15 +2,15 @@ package entity;
 
 import java.sql.Date;
 
-public class TicketBook {
+public class Ticket {
     private int id;
     private Date borrow_date;
     private Date return_date;
     private int book_id;
     private int student_id;
     private int isOpen;
-    public TicketBook() {}
-    public TicketBook(int book_id, int student_id) {
+    public Ticket() {}
+    public Ticket(int book_id, int student_id) {
         this.book_id = book_id;
         this.student_id = student_id;
     }
@@ -65,7 +65,7 @@ public class TicketBook {
 
     @Override
     public String toString() {
-        return "TicketBook{" +
+        return "Ticket{" +
                 "id: " + id +
                 ", borrow_date: " + borrow_date +
                 ", return_date: " + return_date +

@@ -8,7 +8,7 @@ import java.util.logging.Logger;
 
 public class TicketDaoImpl implements TicketDao{
     private static final String SQL_LET_STUDENT_BORROW_BOOK = "INSERT INTO ticketBook (student_id, book_id, isOpen) VALUES (?, ?, 1);";
-    private static final String SQL_LET_STUDENT_RETURN_BOOK = "UPDATE ticketBook SET isOpen = 0 WHERE id = ?;";
+    private static final String SQL_LET_STUDENT_RETURN_BOOK = "UPDATE ticketBook SET isOpen = 0 WHERE book_id = ?;";
     @Override
     public void letStudentBorrowBook(int student_id, int book_id) {
         try (Connection conn = DBConnection.createConnection();
@@ -30,11 +30,11 @@ public class TicketDaoImpl implements TicketDao{
     }
 
     @Override
-    public void letStudentReturnBook(int Ticket_id) {
+    public void letStudentReturnBook(int book_id) {
         try (Connection conn = DBConnection.createConnection();
              PreparedStatement pstm = conn.prepareStatement(SQL_LET_STUDENT_RETURN_BOOK)) {
             conn.setAutoCommit(false);
-            pstm.setInt(1, Ticket_id);
+            pstm.setInt(1, book_id);
             pstm.executeUpdate();
             conn.commit();
             System.out.println("Cho sinh viên trả sách thành công !");
