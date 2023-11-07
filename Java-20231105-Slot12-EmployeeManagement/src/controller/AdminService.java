@@ -9,7 +9,7 @@ import model.EmployeeDaoImpl;
 
 import java.util.List;
 
-public class AdminServide {
+public class AdminService {
     private AdminDao adminDao = new AdminDaoImpl();
     private EmployeeDao employeeDao = new EmployeeDaoImpl();
     public void register(Admin admin) {
@@ -17,6 +17,9 @@ public class AdminServide {
     }
     public void login(Admin admin) {
         adminDao.login(admin);
+    }
+    public boolean isExistUsername(String username) {
+        return adminDao.isExistUsername(username);
     }
     public void createEmployee(Employee employee) {
         employeeDao.createEmployee(employee);
