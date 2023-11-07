@@ -1,0 +1,11 @@
+CREATE DATABASE AssignTwoPractice;
+
+USE AssignTwoPractice;
+
+CREATE TABLE products (
+    id int PRIMARY KEY AUTO_INCREMENT,
+    name varchar(255) NOT NULL,
+    price double NOT NULL,
+    quantity int,
+    sales int
+);

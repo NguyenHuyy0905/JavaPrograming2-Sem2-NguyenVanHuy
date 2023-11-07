@@ -1,0 +1,26 @@
+CREATE DATABASE AssignOnePractice;
+
+USE AssignOnePractice;
+
+CREATE TABLE books (
+    id int PRIMARY KEY AUTO_INCREMENT,
+    name varchar(255) NOT NULL,
+    author varchar(255) NOT NULL,
+    price double NOT NULL,
+    importDate Date,
+    status varchar(255)
+);
+
+CREATE TABLE students (
+    id int PRIMARY KEY AUTO_INCREMENT,
+    name varchar(255) NOT NULL,
+    studentCode varchar(255) NOT NULL
+);
+
+CREATE TABLE book_students (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    book_id INT,
+    student_id INT,
+    CONSTRAINT FK_BOOK_Student_1 FOREIGN KEY (book_id) REFERENCES books(id),
+    CONSTRAINT FK_Book_STUDENT_2 FOREIGN KEY (student_id) REFERENCES students(id)
+);
