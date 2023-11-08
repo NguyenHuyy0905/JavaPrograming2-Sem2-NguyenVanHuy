@@ -103,7 +103,7 @@ public class UI {
     }
     private void viewBookDetails() {
         System.out.println("Enter code: ");
-        int code = sc.nextInt();
+        int code = Integer.parseInt(sc.nextLine());
         staffService.viewBookDetails(code);
     }
     private void createStudent() {
