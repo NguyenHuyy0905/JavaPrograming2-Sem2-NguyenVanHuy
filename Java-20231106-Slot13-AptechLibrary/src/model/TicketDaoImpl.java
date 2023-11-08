@@ -7,8 +7,8 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class TicketDaoImpl implements TicketDao{
-    private static final String SQL_LET_STUDENT_BORROW_BOOK = "INSERT INTO ticketBook (student_id, book_id, isOpen) VALUES (?, ?, 1);";
-    private static final String SQL_LET_STUDENT_RETURN_BOOK = "UPDATE ticketBook SET isOpen = 0 WHERE book_id = ?;";
+    private static final String SQL_LET_STUDENT_BORROW_BOOK = "INSERT INTO ticketBook (student_id, book_id, isOpen, borrow_date) VALUES (?, ?, 1, ?);";
+    private static final String SQL_LET_STUDENT_RETURN_BOOK = "UPDATE ticketBook SET isOpen = 0, return_date = ? WHERE book_id = ?;";
     @Override
     public void letStudentBorrowBook(int student_id, int book_id) {
         try (Connection conn = DBConnection.createConnection();
@@ -16,6 +16,7 @@ public class TicketDaoImpl implements TicketDao{
             conn.setAutoCommit(false);
             pstm.setInt(1, student_id);
             pstm.setInt(2, book_id);
+            pstm.setDate(3, new Date(System.currentTimeMillis()));
             pstm.executeUpdate();
             try (ResultSet generatedId = pstm.getGeneratedKeys()) {
                 if (generatedId.next()) {
@@ -34,7 +35,8 @@ public class TicketDaoImpl implements TicketDao{
         try (Connection conn = DBConnection.createConnection();
              PreparedStatement pstm = conn.prepareStatement(SQL_LET_STUDENT_RETURN_BOOK)) {
             conn.setAutoCommit(false);
-            pstm.setInt(1, book_id);
+            pstm.setDate(1, new Date(System.currentTimeMillis()));
+            pstm.setInt(2, book_id);
             pstm.executeUpdate();
             conn.commit();
             System.out.println("Cho sinh viên trả sách thành công !");
