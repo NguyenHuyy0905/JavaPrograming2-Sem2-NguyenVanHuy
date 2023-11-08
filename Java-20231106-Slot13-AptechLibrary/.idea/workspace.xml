@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="4f996a75-c902-4bb1-a9e0-0ea892b9acbd" name="Changes" comment="" />
+    <list default="true" id="4f996a75-c902-4bb1-a9e0-0ea892b9acbd" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/dao/sql.txt" beforeDir="false" afterPath="$PROJECT_DIR$/src/dao/sql.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/model/BookDaoImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/model/BookDaoImpl.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,7 +60,8 @@
       <option name="presentableId" value="Default" />
       <updated>1699237610218</updated>
       <workItem from="1699237611413" duration="8319000" />
-      <workItem from="1699347545895" duration="664000" />
+      <workItem from="1699347545895" duration="7674000" />
+      <workItem from="1699407110994" duration="292000" />
     </task>
     <servers />
   </component>

@@ -12,12 +12,12 @@ import java.util.logging.Logger;
 
 public class BookDaoImpl implements BookDao{
     private static final String SQL_CREATE_BOOK = "INSERT INTO books (name, author, status) VALUES (?, ?, ?);";
-    private static final String SQL_DELETE_BOOK = "DELETE FROM books WHERE id = ?;";
-    private static final String SQL_UPDATE_STATUS_BOOK = "UPDATE books SET status = ? WHERE id = ?;";
+    private static final String SQL_DELETE_BOOK = "DELETE FROM books WHERE code = ?;";
+    private static final String SQL_UPDATE_STATUS_BOOK = "UPDATE books SET status = ? WHERE code = ?;";
     private static final String SQL_VIEW_ALL_BOOKS = "SELECT * FROM books;";
     private static final String SQL_SEARCH_BOOK_BY_CODE = "SELECT * FROM books WHERE code = ?;";
     private static final String SQL_SEARCH_BOOK_BY_NAME = "SELECT * FROM books WHERE name = ?;";
-    private static final String SQL_VIEW_BOOK_DETAILS = "SELECT b.code, b.name, b.author, b.status, t.borrow_date, t.return_date FROM books b LEFT JOIN ticketBook t ON b.id = t.book_id WHERE b.id = ?;";
+    private static final String SQL_VIEW_BOOK_DETAILS = "SELECT b.code, b.name, b.author, b.status, t.borrow_date, t.return_date FROM books b LEFT JOIN ticketBook t ON b.code = t.book_id WHERE b.code = ?;";
     @Override
     public void createBook(Book book) {
         try (Connection conn = DBConnection.createConnection();

@@ -26,6 +26,6 @@ CREATE TABLE ticketBook (
     book_id int,
     student_id int,
     isOpen tinyint(1),
-    CONSTRAINT FK_book_ticket FOREIGN KEY (book_id) REFERENCES books(id),
+    CONSTRAINT FK_book_ticket FOREIGN KEY (book_id) REFERENCES books(code),
     CONSTRAINT FK_student_ticket FOREIGN KEY (student_id) REFERENCES students(id)
 );
