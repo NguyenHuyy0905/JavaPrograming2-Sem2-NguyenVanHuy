@@ -1,7 +1,9 @@
 package view;
 
+import common.PasswordHashing;
 import controller.StaffService;
 import entity.Book;
+import entity.Staff;
 import entity.Status;
 import entity.Student;
 
@@ -13,6 +15,14 @@ public class UI {
     private final Scanner sc;
     public UI() {
         this.sc = new Scanner(System.in);
+    }
+    private int loginMenu() {
+        System.out.println("---LOGIN & REGISTER---");
+        System.out.println("01. Login");
+        System.out.println("02. Register");
+        System.out.println("00. Exit");
+        int choice = readInt(0, 2);
+        return choice;
     }
     private int mainMenu() {
         System.out.println("---Main Menu---");
@@ -72,6 +82,28 @@ public class UI {
                     throw new AssertionError();
             }
         }
+    }
+    private void register() {
+        boolean isExistUsername;
+        String username;
+        do {
+            System.out.println("Nhập username: ");
+            username = sc.nextLine();
+            isExistUsername = staffService.isExistUsername(username);
+        } while (isExistUsername);
+        System.out.println("Nhập password: ");
+        String password = sc.nextLine();
+        String hashedPassword = PasswordHashing.hashingPassword(password);
+        Staff staff = new Staff(username, hashedPassword);
+        staffService.register(staff);
+    }
+    private void login() {
+        System.out.println("Nhập username: ");
+        String username = sc.nextLine();
+        System.out.println("Nhập password: ");
+        String password = sc.nextLine();
+        Staff staff = new Staff(username, password);
+        staffService.login(staff);
     }
     private void createBook() {
         System.out.println("Enter name: ");

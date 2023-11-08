@@ -1,6 +1,7 @@
 package controller;
 
 import entity.Book;
+import entity.Staff;
 import entity.Status;
 import entity.Student;
 import model.*;
@@ -8,6 +9,7 @@ import model.*;
 import java.util.List;
 
 public class StaffService {
+    private StaffDao staffDao = new StaffDaoImpl();
     private BookDao bookDao = new BookDaoImpl();
     private StudentDao studentDao = new StudentDaoImpl();
     private TicketDao ticketDao = new TicketDaoImpl();
@@ -43,5 +45,14 @@ public class StaffService {
     }
     public void letStudentReturnBook(int book_id) {
         ticketDao.letStudentReturnBook(book_id);
+    }
+    public void register(Staff staff) {
+        staffDao.register(staff);
+    }
+    public void login(Staff staff) {
+        staffDao.login(staff);
+    }
+    public boolean isExistUsername(String username) {
+        return staffDao.isExistUsername(username);
     }
 }

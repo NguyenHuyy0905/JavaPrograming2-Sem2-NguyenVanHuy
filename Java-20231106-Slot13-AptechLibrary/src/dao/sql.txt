@@ -16,7 +16,8 @@ CREATE TABLE students (
 
 CREATE TABLE staffs (
     id int PRIMARY KEY AUTO_INCREMENT,
-    name varchar(255) NOT NULL
+    username varchar(255) NOT NULL,
+    password varchar(255) NOT NULL
 );
 
 CREATE TABLE ticketBook (

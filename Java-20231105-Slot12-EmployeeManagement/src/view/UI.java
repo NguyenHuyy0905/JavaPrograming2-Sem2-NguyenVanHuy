@@ -73,6 +73,7 @@ public class UI {
                                 throw new AssertionError();
                         }
                     }
+                    break;
                 case 2:
                     boolean flag2 = false;
                     while (!flag2) {
@@ -94,6 +95,7 @@ public class UI {
                                 throw new AssertionError();
                         }
                     }
+                    break;
                 case 3:
                     boolean flag3 = false;
                     while (!flag3) {
@@ -112,6 +114,7 @@ public class UI {
                                 throw new AssertionError();
                         }
                     }
+                    break;
                 default:
                     throw new AssertionError();
             }

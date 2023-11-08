@@ -2,11 +2,13 @@ package entity;
 
 public class Staff {
     private int id;
-    private String name;
+    private String username;
+    private String password;
     public Staff() {}
 
-    public Staff(String name) {
-        this.name = name;
+    public Staff(String username, String password) {
+        this.username = username;
+        this.password = password;
     }
 
     public int getId() {
@@ -17,19 +19,19 @@ public class Staff {
         this.id = id;
     }
 
-    public String getName() {
-        return name;
+    public String getUsername() {
+        return username;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setUsername(String username) {
+        this.username = username;
     }
 
-    @Override
-    public String toString() {
-        return "Staff{" +
-                "id: " + id +
-                ", name: '" + name + '\'' +
-                '}';
+    public String getPassword() {
+        return password;
+    }
+
+    public void setPassword(String password) {
+        this.password = password;
     }
 }
