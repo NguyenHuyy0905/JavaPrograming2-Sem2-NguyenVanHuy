@@ -5,16 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f996a75-c902-4bb1-a9e0-0ea892b9acbd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/common/PasswordHashing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/StaffDao.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/model/StaffDaoImpl.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java-20231105-Slot12-EmployeeManagement/.idea/libraries/mysql_connector_java_8_0_28.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java-20231105-Slot12-EmployeeManagement/Slot12EmployeeManagement.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Java-20231105-Slot12-EmployeeManagement/Slot12EmployeeManagement.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Java-20231105-Slot12-EmployeeManagement/src/view/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/../Java-20231105-Slot12-EmployeeManagement/src/view/UI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../NguyenVanHuy-TEST-Java-2/NguyenVanHuy-TEST-Java-2.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../NguyenVanHuy-TEST-Java-2/src/JavaApplication.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../NguyenVanHuy-TEST-Java-2/src/common/PasswordHashing.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../NguyenVanHuy-TEST-Java-2/src/dao/DBConnection.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../NguyenVanHuy-TEST-Java-2/src/dao/sql.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../NguyenVanHuy-TEST-Java-2/src/entity/Admin.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../NguyenVanHuy-TEST-Java-2/src/entity/Employee.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../NguyenVanHuy-TEST-Java-2/src/entity/Product.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../NguyenVanHuy-TEST-Java-2/src/model/AdminDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../NguyenVanHuy-TEST-Java-2/src/model/EmployeeDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../NguyenVanHuy-TEST-Java-2/src/model/ProductDaoImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../NguyenVanHuy-TEST-Java-2/src/view/UI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/controller/StaffService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/controller/StaffService.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/entity/Staff.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/entity/Staff.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/view/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/view/UI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -45,6 +48,7 @@
   &quot;keyToString&quot;: {
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;git-widget-placeholder&quot;: &quot;main&quot;,
     &quot;last_opened_file_path&quot;: &quot;C:/FPT APTECH/Sem2/JavaPrograming2-Sem2-NguyenVanHuy/mysql-connector-java-8.0.28.jar&quot;,
@@ -68,7 +72,8 @@
       <updated>1699237610218</updated>
       <workItem from="1699237611413" duration="8319000" />
       <workItem from="1699347545895" duration="7674000" />
-      <workItem from="1699407110994" duration="5655000" />
+      <workItem from="1699407110994" duration="9842000" />
+      <workItem from="1699543912214" duration="1292000" />
     </task>
     <servers />
   </component>

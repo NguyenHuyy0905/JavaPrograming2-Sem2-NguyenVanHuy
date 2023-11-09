@@ -1,0 +1,9 @@
+CREATE DATABASE TestJavaTwoDataBase;
+
+USE TestJavaTwoDataBase;
+
+CREATE TABLE users (
+    id int(10) PRIMARY KEY AUTO_INCREMENT,
+    username varchar(255) NOT NULL,
+    password varchar(255) NOT NULL
+);
