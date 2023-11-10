@@ -37,6 +37,10 @@ public class AddressBookController {
         }
     }
     public void displayAllContacts() {
-        System.out.println(addressBookList);
+        System.out.printf("%-20s %-20s %-20s %-20s \n", "Contact Name", "Company", "Email", "Phone number");
+//        System.out.println(addressBookList);
+        for (AddressBook addressBook : addressBookList) {
+            System.out.printf("%-20s %-20s %-20s %-20s \n", addressBook.getName(), addressBook.getCompany(), addressBook.getEmail(), addressBook.getPhoneNumber());
+        }
     }
 }
