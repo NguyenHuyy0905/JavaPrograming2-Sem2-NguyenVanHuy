@@ -5,18 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f996a75-c902-4bb1-a9e0-0ea892b9acbd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../NguyenVanHuy-TEST-Java-2/NguyenVanHuy-TEST-Java-2.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NguyenVanHuy-TEST-Java-2/src/JavaApplication.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NguyenVanHuy-TEST-Java-2/src/common/PasswordHashing.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NguyenVanHuy-TEST-Java-2/src/dao/DBConnection.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NguyenVanHuy-TEST-Java-2/src/dao/sql.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NguyenVanHuy-TEST-Java-2/src/entity/Admin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NguyenVanHuy-TEST-Java-2/src/entity/Employee.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NguyenVanHuy-TEST-Java-2/src/entity/Product.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NguyenVanHuy-TEST-Java-2/src/model/AdminDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NguyenVanHuy-TEST-Java-2/src/model/EmployeeDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NguyenVanHuy-TEST-Java-2/src/model/ProductDaoImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NguyenVanHuy-TEST-Java-2/src/view/UI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../NguyenVanHuy-TEST/src/entity/AddressBook.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../NguyenVanHuy-TEST/src/view/UI.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -73,7 +63,8 @@
       <workItem from="1699237611413" duration="8319000" />
       <workItem from="1699347545895" duration="7674000" />
       <workItem from="1699407110994" duration="9842000" />
-      <workItem from="1699543912214" duration="1292000" />
+      <workItem from="1699543912214" duration="2485000" />
+      <workItem from="1699583762779" duration="1031000" />
     </task>
     <servers />
   </component>
