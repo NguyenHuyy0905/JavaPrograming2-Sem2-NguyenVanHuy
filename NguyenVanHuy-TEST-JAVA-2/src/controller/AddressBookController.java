@@ -28,12 +28,15 @@ public class AddressBookController {
     public void findContactByName() {
         System.out.println("Enter name: ");
         String name = sc.nextLine();
+        int count = 0;
         for (AddressBook addressBook : addressBookList) {
             if (addressBook.getName().equals(name)) {
                 System.out.println("Number phone: " + addressBook.getPhoneNumber());
-            } else {
-                System.out.println("Not found !");
+                count++;
             }
+        }
+        if (count == 0) {
+            System.out.println("Not found !");
         }
     }
     public void displayAllContacts() {
