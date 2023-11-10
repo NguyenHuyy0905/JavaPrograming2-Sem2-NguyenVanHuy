@@ -5,9 +5,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="4f996a75-c902-4bb1-a9e0-0ea892b9acbd" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/../NguyenVanHuy-TEST/src/entity/AddressBook.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../NguyenVanHuy-TEST/src/view/UI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../NguyenVanHuy-TEST/src/controller/AddressBookController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NguyenVanHuy-TEST/src/entity/AddressBook.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NguyenVanHuy-TEST/src/entity/AddressBook.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../NguyenVanHuy-TEST/src/view/UI.java" beforeDir="false" afterPath="$PROJECT_DIR$/../NguyenVanHuy-TEST/src/view/UI.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -64,7 +65,7 @@
       <workItem from="1699347545895" duration="7674000" />
       <workItem from="1699407110994" duration="9842000" />
       <workItem from="1699543912214" duration="2485000" />
-      <workItem from="1699583762779" duration="1031000" />
+      <workItem from="1699583762779" duration="1833000" />
     </task>
     <servers />
   </component>

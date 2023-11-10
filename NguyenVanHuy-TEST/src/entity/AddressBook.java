@@ -53,6 +53,6 @@ public class AddressBook {
                 ", company='" + company + '\'' +
                 ", email='" + email + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
-                '}';
+                "}\n";
     }
 }
